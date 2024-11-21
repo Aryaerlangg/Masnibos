@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone - Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Tambahan gaya untuk profil */
+
+        /* Section Styles */
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 2rem auto;
+            color: white;
+        }
+
+        .profile-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid #1DB954;
+        }
+
+        .profile-section h2 {
+            color: #1DB954;
+            margin-bottom: 1rem;
+        }
+
+        .profile-section p {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .edit-profile-btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #1DB954;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .edit-profile-btn:hover {
+            background-color: #17a645;
+        }
+
+        /* Footer Music Player */
+        .music-player {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 1rem;
+            text-align: center;
+            color: white;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .profile-section img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .edit-profile-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">🎵 Spotify</div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="playlist.html">Playlist</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="profile-section">
+            <img src="https://via.placeholder.com/150" alt="User Profile Picture">
+            <h2>John Doe</h2>
+            <p>Email: john.doe@example.com</p>
+            <p>Member Since: January 2023</p>
+            <button class="edit-profile-btn">Edit Profile</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="music-player">
+            <p id="now-playing">Now Playing: None</p>
+            <audio id="audio-player" controls>
+                <source id="audio-source" src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">🎵 Spotify</div>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="playlist.html">Playlist</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section">
+            <h1>Welcome to Spotify</h1>
+            <p>Discover your favorite music and playlists.</p>
+            <div class="music-grid">
+                <!-- Song Card 1 -->
+                <article class="card">
+                    <img src="./Gambar/Breaking The Chain.png" alt="Album art for Breaking The Chain">
+                    <h3>Breaking The Chain</h3>
+                    <button onclick="playMusic('song1')">Play</button>
+                </article>
+                <!-- Song Card 2 -->
+                <article class="card">
+                    <img src="./Gambar/Bunga Kertas Merah Berduri.png" alt="Album art for Bunga Kertas Merah Berduri">
+                    <h3>Bunga Kertas Merah Berduri</h3>
+                    <button onclick="playMusic('song2')">Play</button>
+                </article>
+                <!-- Song Card 3 -->
+                <article class="card">
+                    <img src="./Gambar/Magic And Mystery.png" alt="Album art for Magic And Mystery" onerror="this.src='https://via.placeholder.com/150'">
+                    <h3>Magic And Mystery</h3>
+                    <button onclick="playMusic('song3')">Play</button>
+                </article>
+                <!-- Song Card 4 -->
+                <article class="card">
+                    <img src="./Gambar/Revenge Is Mine.png" alt="Album art for Magic And Mystery" onerror="this.src='https://via.placeholder.com/150'">
+                    <h3>Revenge Is Mine</h3>
+                    <button onclick="playMusic('song4')">Play</button>
+                </article>
+                <!-- Song Card 5 -->
+                <article class="card">
+                    <img src="./Gambar/Vanity And Void.png" alt="Album art for Magic And Mystery" onerror="this.src='https://via.placeholder.com/150'">
+                    <h3>Vanity And Void</h3>
+                    <button onclick="playMusic('song5')">Play</button>
+                </article>
+                <!-- Song Card 6 -->
+                <article class="card">
+                    <img src="./Gambar/Vanity And Void.png" alt="Album art for Magic And Mystery" onerror="this.src='https://via.placeholder.com/150'">
+                    <h3>Crawling For The Mercy</h3>
+                    <button onclick="playMusic('song6')">Play</button>
+                </article>
+                <!-- Song Card 7 -->
+                <article class="card">
+                    <img src="./Gambar/Vanity And Void.png" alt="Album art for Magic And Mystery" onerror="this.src='https://via.placeholder.com/150'">
+                    <h3>Purge</h3>
+                    <button onclick="playMusic('song7')">Play</button>
+                </article>
+                <!-- Add more cards as needed -->
+            </div>
+        </section>
+
+        <!-- Playlist Section -->
+        <section id="playlist-container">
+            <h2>Your Playlist</h2>
+            <ul id="playlist-items">
+                <p>No songs added yet.</p>
+            </ul>
+            <input type="text" id="song-title" placeholder="Enter song title">
+            <button id="add-song-btn">Add Song</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="music-player">
+            <p id="now-playing">Now Playing: None</p>
+            <audio id="audio-player" controls>
+                <source id="audio-source" src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

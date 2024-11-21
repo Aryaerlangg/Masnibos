@@ -1,0 +1,199 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+    color: white;
+}
+
+h1, h2 {
+    color: #1DB954;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #1DB954;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar .menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Section */
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Music Grid */
+.music-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 120px; /* Memberikan jarak agar tombol terakhir terlihat */
+}
+
+.card {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 150px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #1DB954;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #17a645;
+}
+
+/* Music Player */
+.music-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Tetap di atas elemen lain */
+}
+
+/* Logo */
+.logo-image {
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .music-grid {
+        gap: 1rem;
+        margin-bottom: 140px; /* Tambahan ruang untuk layar kecil */
+    }
+
+    .card {
+        width: 100%; /* Agar lebih responsif di layar kecil */
+    }
+}
+
+#search-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Search Bar */
+#search-bar {
+    padding: 10px;
+    width: 70%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black; /* Pastikan teks input terlihat jelas */
+    background-color: white; /* Tetap putih untuk kontras */
+}
+
+#search-bar::placeholder {
+    color: #aaa; /* Warna placeholder lebih kontras */
+}
+
+/* Search Results */
+#search-results {
+    margin-top: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar hasil pencarian */
+}
+
+/* Hasil Pencarian Individual */
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff; /* Latar belakang putih */
+    color: #333; /* Warna teks gelap untuk kontras */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-result-item:hover {
+    transform: scale(1.02); /* Efek zoom */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Thumbnail Gambar */
+.search-result-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Teks Lagu dan Artis */
+.search-result-item span {
+    flex: 1; /* Agar teks memenuhi ruang sisa */
+    font-size: 16px;
+    font-weight: bold;
+    color: #000; /* Warna teks untuk kontras */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Tambahkan jika teks terlalu panjang */
+    white-space: nowrap;
+}
+
+/* Tombol Play */
+.search-result-item button {
+    padding: 5px 10px;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-result-item button:hover {
+    background-color: #14833b;
+}
+
+/* Placeholder jika tidak ada hasil pencarian */
+#search-results p {
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
+}
